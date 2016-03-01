@@ -1,0 +1,6 @@
+<div ng-if="!results.photo">Loading...</div>
+
+<div class="col-xs-3" ng-repeat="picture in results.photo">
+    <img ng-src="https://farm{{picture.farm}}.staticflickr.com/{{picture.server}}/{{picture.id}}_{{picture.secret}}_m.jpg" class="thumbnail"
+         ui-sref="main.photo({ id: picture.id})">
+</div>

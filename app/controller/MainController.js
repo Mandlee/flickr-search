@@ -23,18 +23,7 @@ app.controller('MainController', ['$scope', '$state', 'HttpService', function ($
 
     //https://www.flickr.com/services/api/flickr.photos.search.html
     $scope.search = function () {
-        HttpService.get("/rest", {
-            method: 'flickr.photos.search',
-            api_key: Config.API_KEY,
-            format: 'json',
-            text: vm.searchText,
-            nojsoncallback: 1
-        }).success(function (data) {
-            console.log(data);
-            $scope.results = data.photos;
-        }).error(function (error) {
-            console.error(error);
-        });
+        $state.go('main.search', {searchText: vm.searchText});
     };
 
 }

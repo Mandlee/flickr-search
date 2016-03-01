@@ -15,6 +15,18 @@ appRoutes.config(function ($stateProvider, $urlRouterProvider) {
             url: '/home',
             templateUrl: 'view/pages/home.html'
         })
+        .state('main.search', {
+            url: '/search/{searchText}',
+            templateUrl: 'view/pages/search.html',
+            controller: 'SearchController',
+            controllerAs: 'searchCtrl'
+        })
+        .state('main.photo', {
+            url: '/photo/{id}',
+            templateUrl: 'view/pages/photo.html',
+            controller: 'PhotoController',
+            controllerAs: 'photoCtrl'
+        })
         .state('main.about', {
             url: '/about',
             templateUrl: 'view/pages/about.html'
