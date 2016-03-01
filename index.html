@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=0.5, user-scalable=1, minimum-scale=1, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <title>Flickr Search</title>
+
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,700' rel='stylesheet' type='text/css'>
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+    <!-- build:css css/lib.min.css -->
+    <link href="css/base.css" rel="stylesheet" type="text/css">
+    <!-- endbuild -->
+</head>
+<body ng-controller="MainController as mainCtrl">
+
+    <div data-ui-view class="view"></div>
+
+    <!-- build:js js/app.min.js -->
+    <!-- JQuery, Bootstrap, etc. -->
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <!-- Angular main libs -->
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="bower_components/angular-local-storage/dist/angular-local-storage.min.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <!-- endbuild -->
+
+    <!-- build:js js/lib.min.js -->
+    <!-- Third party libraries -->
+    <!--<script src="js/detect-browser.js"></script>-->
+    <!-- endbuild -->
+
+
+    <!-- Application -->
+    <!-- build:js app/full.min.js -->
+    <!-- Angular project files -->
+    <script src="app/app.js"></script>
+    <script src="app/config.js"></script>
+    <script src="app/routes.js"></script>
+
+    <!-- Factories -->
+    <script src="app/factory/HttpInterceptor.js"></script>
+
+    <!-- Services -->
+    <!--<script src="app/service/HttpService.js"></script>-->
+
+    <!-- Controllers -->
+    <script src="app/controller/MainController.js"></script>
+
+    <!-- Directives -->
+    <!-- endbuild -->
+</body>
+</html>
