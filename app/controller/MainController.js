@@ -3,9 +3,10 @@
  */
 'use strict';
 
-app.controller('MainController', ['$scope', '$state', function ($scope, $state) {
+app.controller('MainController', ['$scope', '$state', 'HttpService', function ($scope, $state, HttpService) {
     var vm = this;
     vm.Config = Config;
+    vm.searchText = '';
 
     /**
      * Sets the navbar active item.
@@ -18,6 +19,22 @@ app.controller('MainController', ['$scope', '$state', function ($scope, $state) 
             return 'active';
         }
         return '';
+    };
+
+    //https://www.flickr.com/services/api/flickr.photos.search.html
+    $scope.search = function () {
+        HttpService.get("/rest", {
+            method: 'flickr.photos.search',
+            api_key: Config.API_KEY,
+            format: 'json',
+            text: vm.searchText,
+            nojsoncallback: 1
+        }).success(function (data) {
+            console.log(data);
+            $scope.results = data.photos;
+        }).error(function (error) {
+            console.error(error);
+        });
     };
 
 }

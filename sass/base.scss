@@ -3,5 +3,9 @@
 @import "mixins";
 // Reset
 @import "normalize";
+// Font Face
+@import "app/font-face";
 // App StyelSheet
 @import "app/base";
+@import "app/navbar";
+@import "app/header";

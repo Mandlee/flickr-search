@@ -1,1 +1,21 @@
-home
+<div class="page-background">
+    <div class="container">
+
+        <!-- Main component for a primary marketing message or call to action -->
+        <div class="jumbotron">
+            <h1>Search images</h1>
+            <p>Just type what you search or choose tag.</p>
+            <div class="input-group">
+                <input type="text" class="form-control" ng-model="mainCtrl.searchText" placeholder="Search for...">
+            <span class="input-group-btn">
+                <button class="btn btn-default" type="button" ng-click="search()">Search</button>
+            </span>
+            </div><!-- /input-group -->
+        </div>
+
+    </div> <!-- /container -->
+
+    <div class="col-xs-3" ng-repeat="picture in results.photo">
+        <img ng-src="https://farm{{picture.farm}}.staticflickr.com/{{picture.server}}/{{picture.id}}_{{picture.secret}}_m.jpg" class="thumbnail">
+    </div>
+</div>

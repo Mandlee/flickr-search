@@ -5,7 +5,7 @@
 
 var Config = {
     BACKEND_URL: 'https://api.flickr.com/services',
-    API_KEY: '',
+    API_KEY: '57f694132e4714c29a64c9af890b124e',
     development: false,
     "appName": "Flickr Search",
     "version": "0.1 dev"

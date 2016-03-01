@@ -14,6 +14,10 @@ appRoutes.config(function ($stateProvider, $urlRouterProvider) {
         .state('main.home', {
             url: '/home',
             templateUrl: 'view/pages/home.html'
+        })
+        .state('main.about', {
+            url: '/about',
+            templateUrl: 'view/pages/about.html'
         });
 
     //$locationProvider.html5Mode(true);
