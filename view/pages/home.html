@@ -1,6 +1,4 @@
 <div class="page-background">
-    <div class="container">
-
         <!-- Main component for a primary marketing message or call to action -->
         <div class="jumbotron">
             <h1>Search images</h1>
@@ -12,6 +10,17 @@
             </span>
             </div><!-- /input-group -->
         </div>
-    </div> <!-- /container -->
 
+        <div class="row">
+            <div class="col-xs-3" ng-repeat="tag in mainCtrl.getAllTag()">
+                {{tag.name}}
+            </div>
+        </div>
+
+    <!--<div class="row">
+        <div class="col-xs-3" ng-repeat="subTag in tag.subTag">
+            {{subTag.name}}
+            &lt;!&ndash;<span ng-repeat="sub in subTag.subTag">{{sub.name}}</span>&ndash;&gt;
+        </div>
+    </div>-->
 </div>

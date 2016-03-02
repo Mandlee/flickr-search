@@ -5,8 +5,8 @@
 
 var app = angular.module('app', [
     'appRoutes',
-    'angular-loading-bar'
-    //'ui.bootstrap'
+    'angular-loading-bar',
+    'ui.bootstrap'
 ]);
 
 app.config(['$httpProvider', 'cfpLoadingBarProvider', function ($httpProvider, cfpLoadingBarProvider) {

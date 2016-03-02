@@ -1,0 +1,31 @@
+.image-thumb {
+  height: 200px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: #fff;
+  background-size: cover;
+  cursor: pointer;
+  &:hover {
+    .title {
+      display: inherit;
+    }
+  }
+  .title {
+    background: white;
+    opacity: 0.8;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 15px;
+    display: -webkit-box;
+    max-width: 100%;
+    max-height: 85px;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    display: none;
+  }
+}

@@ -10,11 +10,8 @@ app.controller('PhotoController', ['$scope', '$stateParams', 'HttpService', func
 
     HttpService.get("/rest", {
         method: 'flickr.photos.getInfo',
-        api_key: Config.API_KEY,
-        format: 'json',
-        photo_id: $stateParams.id,
+        photo_id: $stateParams.id
         //secret: secret,
-        nojsoncallback: 1
     }).success(function (data) {
         console.log(data);
         $scope.picture = data.photo;

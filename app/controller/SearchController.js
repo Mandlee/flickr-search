@@ -3,24 +3,29 @@
  */
 'use strict';
 
-app.controller('SearchController', ['$scope', '$stateParams', 'HttpService', function ($scope, $stateParams, HttpService) {
+app.controller('SearchController', ['$scope', '$stateParams', 'HttpService', 'TagService', function ($scope, $stateParams, HttpService, TagService) {
     var vm = this;
+    vm.actualPage = 1;
 
     console.log($stateParams.searchText);
 
-    HttpService.get("/rest", {
-        method: 'flickr.photos.search',
-        api_key: Config.API_KEY,
-        format: 'json',
-        text: $stateParams.searchText,
-        nojsoncallback: 1
-    }).success(function (data) {
-        console.log(data);
-        $scope.results = data.photos;
-    }).error(function (error) {
-        console.error(error);
-    });
+    $scope.refresh = function () {
+        HttpService.get("/rest", {
+            method: 'flickr.photos.search',
+            text: $stateParams.searchText,
+            page: vm.actualPage,
+            tag: TagService.getTag()
+        }).success(function (data) {
+            console.log(data);
+            $scope.results = data.photos;
+            vm.totalPages = data.photos.total; //: 3408
+            console.log('pages:', vm.bigTotalItems);
+        }).error(function (error) {
+            console.error(error);
+        });
+    };
 
+    $scope.refresh();
 
 }
 ]);
