@@ -7,19 +7,16 @@ app.controller('SearchController', ['$scope', '$stateParams', 'HttpService', 'Ta
     var vm = this;
     vm.actualPage = 1;
 
-    console.log($stateParams.searchText);
-
     $scope.refresh = function () {
         HttpService.get("/rest", {
             method: 'flickr.photos.search',
             text: $stateParams.searchText,
-            page: vm.actualPage,
-            tag: TagService.getTag()
+            tags: $stateParams.tag,
+            page: vm.actualPage
         }).success(function (data) {
             console.log(data);
             $scope.results = data.photos;
-            vm.totalPages = data.photos.total; //: 3408
-            console.log('pages:', vm.bigTotalItems);
+            vm.totalPages = data.photos.total;
         }).error(function (error) {
             console.error(error);
         });

@@ -1,2 +1,7 @@
-<!--{{picture}}-->
-<img ng-src="https://farm{{picture.farm}}.staticflickr.com/{{picture.server}}/{{picture.id}}_{{picture.secret}}_b.jpg">
+<div ng-if="picture">
+    {{picture.title._content}} - {{picture.dates.taken}}
+    Created by {{picture.owner.username}}
+    Tags:
+    <span ng-repeat="tag in picture.tags.tag">{{tag.raw}}</span>
+    <img-flickr data-picture="picture" data-size="c"></img-flickr>
+</div>

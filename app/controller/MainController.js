@@ -3,10 +3,11 @@
  */
 'use strict';
 
-app.controller('MainController', ['$scope', '$state', 'HttpService', function ($scope, $state, HttpService) {
+app.controller('MainController', ['$scope', '$state', 'TagService', function ($scope, $state, TagService) {
     var vm = this;
     vm.Config = Config;
     vm.searchText = '';
+    vm.getAllTag = TagService.getAll;
 
     /**
      * Sets the navbar active item.
@@ -23,7 +24,21 @@ app.controller('MainController', ['$scope', '$state', 'HttpService', function ($
 
     //https://www.flickr.com/services/api/flickr.photos.search.html
     $scope.search = function () {
-        $state.go('main.search', {searchText: vm.searchText});
+        if (vm.searchText !== '' || TagService.getTag()) {
+            $state.go('main.search', {
+                searchText: vm.searchText,
+                tag: TagService.getTag()
+
+            });
+        }
+    };
+
+    vm.setTag = function (tag) {
+        TagService.setTag(tag);
+    };
+
+    vm.isActiveTag = function (tag) {
+        return TagService.getTag() === tag;
     };
 
 }

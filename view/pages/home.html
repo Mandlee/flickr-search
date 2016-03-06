@@ -1,26 +1,33 @@
 <div class="page-background">
-        <!-- Main component for a primary marketing message or call to action -->
-        <div class="jumbotron">
-            <h1>Search images</h1>
-            <p>Just type what you search or choose tag.</p>
-            <div class="input-group">
+    <!-- Main component for a primary marketing message or call to action -->
+    <div class="jumbotron">
+        <h1>Search images</h1>
+        <p>Just type what you search or choose tag.</p>
+        <form class="row">
+            <div class="col-xs-12 col-sm-8 col-md-8">
                 <input type="text" class="form-control" ng-model="mainCtrl.searchText" placeholder="Search for...">
-            <span class="input-group-btn">
-                <button class="btn btn-default" type="button" ng-click="search()">Search</button>
-            </span>
-            </div><!-- /input-group -->
-        </div>
-
-        <div class="row">
-            <div class="col-xs-3" ng-repeat="tag in mainCtrl.getAllTag()">
-                {{tag.name}}
             </div>
-        </div>
+            <div class="col-xs-12 col-sm-4 col-md-4">
+                <button class="btn btn-default" type="button" ng-click="search()">Search</button>
+            </div>
+        </form>
+    </div>
 
-    <!--<div class="row">
-        <div class="col-xs-3" ng-repeat="subTag in tag.subTag">
-            {{subTag.name}}
-            &lt;!&ndash;<span ng-repeat="sub in subTag.subTag">{{sub.name}}</span>&ndash;&gt;
-        </div>
-    </div>-->
+    <ul class="nav nav-pills nav-justified">
+        <li role="presentation" ng-repeat="tag in mainCtrl.getAllTag()" ng-class="{'active': mainCtrl.isActiveTag(tag.name)}">
+            <a href="javascript:void(0)" ng-click="mainCtrl.setTag(tag.name)">{{tag.name}}</a>
+            <ul ng-show="mainCtrl.isActiveTag(tag.name)">
+                <li ng-repeat="subTag in tag.subTag">
+                    <a href="javascript:void(0)" ng-click="mainCtrl.setTag(subTag.name)">{{subTag.name}}</a>
+                    <ul>
+                        <li ng-repeat="sub in subTag.subTag">
+                            <a href="javascript:void(0)" ng-click="mainCtrl.setTag(sub)">{{sub}}</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+        </li>
+    </ul>
+
 </div>

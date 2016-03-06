@@ -16,7 +16,7 @@ appRoutes.config(function ($stateProvider, $urlRouterProvider) {
             templateUrl: 'view/pages/home.html'
         })
         .state('main.search', {
-            url: '/search/{searchText}',
+            url: '/search/{searchText}?tag',
             templateUrl: 'view/pages/search.html',
             controller: 'SearchController',
             controllerAs: 'searchCtrl'
