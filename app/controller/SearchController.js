@@ -6,6 +6,7 @@
 app.controller('SearchController', ['$scope', '$stateParams', 'HttpService', 'TagService', function ($scope, $stateParams, HttpService, TagService) {
     var vm = this;
     vm.actualPage = 1;
+    vm.searchText = $stateParams.searchText;
 
     //https://www.flickr.com/services/api/flickr.photos.search.html
     $scope.refresh = function () {

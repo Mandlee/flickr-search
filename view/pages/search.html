@@ -1,5 +1,4 @@
-<search-form></search-form>
-
+<search-form data-params="searchCtrl.searchText"></search-form>
 <ul class="nav nav-pills nav-justified">
     <li role="presentation" ng-repeat="tag in mainCtrl.getAllTag()" ng-class="{'active': mainCtrl.isActiveTag(tag.name)}">
         <a href="javascript:void(0)" ng-click="mainCtrl.toggleTag(tag.name)">{{tag.name}}</a>

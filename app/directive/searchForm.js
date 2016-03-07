@@ -4,9 +4,12 @@
 app.directive('searchForm', ['TagService', '$state', function (TagService, $state) {
     return {
         restrict: 'E',
+        scope: {
+            params: '='
+        },
         templateUrl: 'view/common/search_form.html',
         link: function ($scope, $element, $attr) {
-            $scope.text = '';
+            $scope.text = $scope.params;
             $scope.search = function () {
                 if ($scope.text !== '' || TagService.getTag()) {
                     $state.go('main.search', {
