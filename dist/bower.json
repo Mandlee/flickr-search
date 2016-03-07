@@ -1,0 +1,28 @@
+{
+  "name": "flickr-search",
+  "authors": [
+    "mandli.bence@gmail.com"
+  ],
+  "description": "",
+  "main": "",
+  "private": true,
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "2.1.4",
+    "angular": "1.3.18",
+    "bootstrap": "3.3.5",
+    "angular-ui-router": "0.2.15",
+    "animate.css": "3.4.0",
+    "angular-bootstrap": "0.14.3",
+    "angular-loading-bar": "^0.8.0"
+  }
+}
