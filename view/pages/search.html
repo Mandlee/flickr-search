@@ -5,7 +5,7 @@
         <ul class="nav nav-pills nav-justified">
             <li role="presentation" ng-repeat="tag in mainCtrl.getAllTag()" ng-class="{'active': mainCtrl.isActiveTag(tag.name)}">
                 <a href="javascript:void(0)" ng-click="mainCtrl.toggleTag(tag.name)">{{tag.name}}</a>
-                <ul class="nav nav-pills" ng-show="mainCtrl.isActiveTag(tag.name)">
+                <ul class="nav nav-pills nav-stacked" ng-show="mainCtrl.isActiveTag(tag.name)">
                     <li ng-repeat="subTag in tag.subTag" ng-class="{'active': mainCtrl.isActiveTag(tag.name+'.'+subTag.name)}">
                         <a href="javascript:void(0)" ng-click="mainCtrl.toggleTag(tag.name+'.'+subTag.name)">{{subTag.name}}</a>
                         <ul class="nav nav-pills" ng-show="mainCtrl.isActiveTag(tag.name+'.'+subTag.name)">
