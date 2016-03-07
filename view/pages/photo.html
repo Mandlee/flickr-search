@@ -1,7 +1,19 @@
-<div ng-if="picture">
-    {{picture.title._content}} - {{picture.dates.taken}}
-    Created by {{picture.owner.username}}
-    Tags:
-    <span ng-repeat="tag in picture.tags.tag">{{tag.raw}}</span>
-    <img-flickr data-picture="picture" data-size="c"></img-flickr>
+<div ng-if="picture" class="photo row">
+    <div class="col-xs-12">
+        <h2>{{picture.title._content}}</h2>
+        Created by {{picture.owner.username}} - {{picture.dates.taken}}
+    </div>
+    <div class="col-xs-12 text-center">
+        <img-flickr data-picture="picture" data-size="c"></img-flickr>
+    </div>
+    <div class="col-xs-12">
+        Tags:
+        <ul class="nav nav-pills">
+            <li role="presentation" ng-repeat="tag in picture.tags.tag">
+                <a href="javascript:void(0)" ng-click="photoCtrl.selectTag(tag.raw)">
+                    {{tag.raw}}
+                </a>
+            </li>
+        </ul>
+    </div>
 </div>
