@@ -2,14 +2,7 @@
     <div class="jumbotron">
         <h1>Search images</h1>
         <p>Just type what you search or choose tag.</p>
-        <form class="row">
-            <div class="col-xs-12 col-sm-8 col-md-8">
-                <input type="text" class="form-control" ng-model="mainCtrl.searchText" placeholder="Search for...">
-            </div>
-            <div class="col-xs-12 col-sm-4 col-md-4">
-                <button class="btn btn-search" type="button" ng-click="search()">Search</button>
-            </div>
-        </form>
+        <search-form></search-form>
     </div>
 
     <ul class="nav nav-pills nav-justified">

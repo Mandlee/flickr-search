@@ -1,11 +1,5 @@
-<form class="row">
-    <div class="col-xs-12 col-sm-8 col-md-8">
-        <input type="text" class="form-control" ng-model="searchCtrl.searchText" placeholder="Search for...">
-    </div>
-    <div class="col-xs-12 col-sm-4 col-md-4">
-        <button class="btn btn-default btn-search" type="button" ng-click="search()">Search</button>
-    </div>
-</form>
+<search-form></search-form>
+
 <ul class="nav nav-pills nav-justified">
     <li role="presentation" ng-repeat="tag in mainCtrl.getAllTag()" ng-class="{'active': mainCtrl.isActiveTag(tag.name)}">
         <a href="javascript:void(0)" ng-click="mainCtrl.toggleTag(tag.name)">{{tag.name}}</a>

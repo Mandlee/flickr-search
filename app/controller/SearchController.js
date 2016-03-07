@@ -7,6 +7,7 @@ app.controller('SearchController', ['$scope', '$stateParams', 'HttpService', 'Ta
     var vm = this;
     vm.actualPage = 1;
 
+    //https://www.flickr.com/services/api/flickr.photos.search.html
     $scope.refresh = function () {
         HttpService.get("/rest", {
             method: 'flickr.photos.search',
