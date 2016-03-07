@@ -37,8 +37,27 @@ app.controller('MainController', ['$scope', '$state', 'TagService', function ($s
         TagService.setTag(tag);
     };
 
+    var _activeTag = null;
+
     vm.isActiveTag = function (tag) {
-        return TagService.getTag() === tag;
+        if (_activeTag === null) {
+            return false;
+        }
+        return _activeTag.indexOf(tag) !== -1;
+    };
+
+    vm.toggleTag = function (tag) {
+        if (_activeTag === tag) {
+            TagService.setTag(null);
+            _activeTag = null;
+        }
+        else {
+            if (tag.indexOf('.') !== -1) {
+                var _subTag = tag.slice(tag.lastIndexOf('.') + 1, tag.length);
+            }
+            TagService.setTag(_subTag || tag);
+            _activeTag = tag;
+        }
     };
 
 }

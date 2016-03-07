@@ -1,4 +1,46 @@
+html{
+  position: relative;
+  min-height: 100%;
+}
+
 body {
   font-family: $font-stack-roboto;
-  padding-top: 70px;
+  padding-top: 75px;
+}
+
+.page {
+  padding-top: 25px;
+}
+
+.card {
+  @include css3-prefix("box-shadow", "0 4px 5px 0 rgba(0,0,0,.14),0 1px 10px 0 rgba(0,0,0,.12),0 2px 4px -1px rgba(0,0,0,.2)");
+  @include css3-prefix("border-radius", "2px");
+}
+
+.jumbotron {
+  background-image: url('../img/header.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: #fff;
+  background-size: cover;
+  color: #ffffff;
+}
+
+.tag-img {
+  height: 50px;
+  width: 50px;
+}
+
+.nav-pills > li.active > a {
+  background-color: $accentColor !important;
+}
+
+.btn-search {
+  width: 100%;
+  background: $accentColor;
+  color: white;
+  &:hover {
+    @include opacity(0.9);
+    color: white;
+  }
 }

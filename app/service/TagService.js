@@ -9,7 +9,7 @@ app.service('TagService', function () {
     var _tag = [
         {
             name: 'Animals',
-            icons: '../img/tags/animal.svg',
+            icons: './img/tags/animal.svg',
             subTag: [
                 {
                     name: 'Pets',
@@ -42,7 +42,7 @@ app.service('TagService', function () {
         },
         {
             name: 'Food',
-            icons: '../img/tags/food.svg',
+            icons: './img/tags/food.svg',
             subTag: [
                 {
                     name: 'Fast Food',
@@ -64,7 +64,7 @@ app.service('TagService', function () {
         },
         {
             name: 'Vechicle',
-            icons: '../img/tags/vehicle.svg',
+            icons: './img/tags/vehicle.svg',
             subTag: [
                 {
                     name: 'Motorcycle',
@@ -86,7 +86,7 @@ app.service('TagService', function () {
         },
         {
             name: 'Movie',
-            icons: '../img/tags/movie.svg',
+            icons: './img/tags/movie.svg',
             subTag: [
                 {
                     name: 'Science fiction',
