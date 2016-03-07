@@ -63,7 +63,7 @@ app.service('TagService', function () {
             ]
         },
         {
-            name: 'Vechicle',
+            name: 'Vehicle',
             icons: './img/tags/vehicle.svg',
             subTag: [
                 {

@@ -1,0 +1,21 @@
+.home {
+
+  .jumbotron {
+    background-image: url('../img/header.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: #fff;
+    background-size: cover;
+    color: #ffffff;
+  }
+
+  .tag-img {
+    height: 50px;
+    width: 50px;
+  }
+
+  .nav-pills > li.active > a {
+    background-color: $accentColor !important;
+  }
+
+}

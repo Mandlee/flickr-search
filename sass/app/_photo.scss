@@ -1,5 +1,15 @@
 .photo {
+  h2{
+    margin-top: 0;
+  }
+  
   img {
     padding: 20px 0;
+  }
+
+  .nav-pills > li > a {
+    border: 2px solid $tagBorder;
+    padding: 5px 5px;
+    margin: 5px;
   }
 }

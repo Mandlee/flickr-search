@@ -1,4 +1,4 @@
-html{
+html {
   position: relative;
   min-height: 100%;
 }
@@ -12,31 +12,13 @@ body {
   padding: 25px 0;
 }
 
-h1,h2,h3{
+h1, h2, h3 {
   font-weight: 400;
 }
 
 .card {
   @include css3-prefix("box-shadow", "0 4px 5px 0 rgba(0,0,0,.14),0 1px 10px 0 rgba(0,0,0,.12),0 2px 4px -1px rgba(0,0,0,.2)");
-  @include css3-prefix("border-radius", "2px");
-}
-
-.jumbotron {
-  background-image: url('../img/header.jpg');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-color: #fff;
-  background-size: cover;
-  color: #ffffff;
-}
-
-.tag-img {
-  height: 50px;
-  width: 50px;
-}
-
-.nav-pills > li.active > a {
-  background-color: $accentColor !important;
+  @include css3-prefix("border-radius", "3px");
 }
 
 .btn-search {
@@ -46,5 +28,13 @@ h1,h2,h3{
   &:hover {
     @include opacity(0.9);
     color: white;
+  }
+}
+
+.search-form {
+  input, .btn-search {
+    height: 4.5rem;
+    font-size: 2rem;
+    @include css3-prefix("border-radius", "5px");
   }
 }

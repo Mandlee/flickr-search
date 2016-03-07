@@ -29,3 +29,17 @@
     display: none;
   }
 }
+
+.search{
+  .tags{
+    padding: 20px 0;
+    .nav-pills > li.active > a {
+      background-color: $accentColor !important;
+    }
+    .nav-pills > li > a {
+      border: 2px solid $tagBorder;
+      padding: 5px 5px;
+      margin: 5px;
+    }
+  }
+}
