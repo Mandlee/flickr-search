@@ -7,7 +7,7 @@
   cursor: pointer;
   &:hover {
     .title {
-      display: inherit;
+      display: -webkit-box;
     }
   }
   .title {
@@ -17,7 +17,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    padding: 15px;
+    padding: 0 15px;
     display: -webkit-box;
     max-width: 100%;
     max-height: 85px;
@@ -30,8 +30,8 @@
   }
 }
 
-.search{
-  .tags{
+.search {
+  .tags {
     padding: 20px 0;
     .nav-pills > li.active > a {
       background-color: $accentColor !important;
