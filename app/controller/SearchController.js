@@ -16,7 +16,6 @@ app.controller('SearchController', ['$scope', '$stateParams', 'HttpService', 'Ta
             tags: $stateParams.tag,
             page: vm.actualPage
         }).success(function (data) {
-            console.log(data);
             $scope.results = data.photos;
             vm.totalPages = data.photos.total;
         }).error(function (error) {

@@ -10,7 +10,6 @@ app.controller('PhotoController', ['$scope', '$stateParams', 'HttpService', '$st
         method: 'flickr.photos.getInfo',
         photo_id: $stateParams.id
     }).success(function (data) {
-        console.log(data);
         $scope.picture = data.photo;
     }).error(function (error) {
         console.error(error);
