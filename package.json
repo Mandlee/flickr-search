@@ -13,7 +13,7 @@
     "grunt-rev": "~0.1.0",
     "grunt-usemin": "~2.0.2",
     "matchdep": "~0.3.0",
-	"grunt-contrib-imagemin": "0.9.4",
-    "grunt-sonar-runner": "^2.4.4"
+    "grunt-sonar-runner": "^2.4.4",
+    "grunt-contrib-imagemin": "^1.0.0"
   }
 }

@@ -3,7 +3,7 @@ module.exports = function (grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
-        clean: ['dist'],
+        clean: ['dist','.tmp','.sass-cache'],
 
         copy: {
             main: {
@@ -103,7 +103,7 @@ module.exports = function (grunt) {
 
     // Tell Grunt what to do when we type "grunt" into the terminal
     grunt.registerTask('default', [
-        'clean', 'sass', 'copy', 'useminPrepare', 'concat', 'cssmin', 'uglify', 'rev', 'usemin'
+        'clean', 'sass', 'copy', 'useminPrepare', 'concat', 'cssmin', 'uglify', 'imagemin','rev', 'usemin'
     ]);
 
 };
