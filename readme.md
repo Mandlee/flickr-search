@@ -12,7 +12,7 @@
 **Install bower dependencies:**
 On the terminal
 
-    bower install —save
+    bower install
 
 **Add SASS watchers on WebStorm settings:**
 

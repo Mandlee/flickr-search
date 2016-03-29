@@ -10,21 +10,12 @@ app.service('HttpService', ['$http', function ($http) {
         params['api_key'] = Config.API_KEY;
         params['format'] = 'json';
         params['nojsoncallback'] = 1;
-        if (uri.substr(1, 1) === '/') {
-            url = '';
-            uri = uri.substr(2);
-        }
         return $http.get(url + uri, {params: params});
     };
 
     this.post = function (uri, data) {
         return $http.post(Config.BACKEND_URL + uri, $.param(data || {}));
     };
-
-    /*return {
-        get: get,
-        post: post
-    };*/
 
 }
 ]);
